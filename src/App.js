@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  const embedCode =
+    '<iframe src="https://player.vimeo.com/video/893471945?h=5d2659220c" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen ></iframe>';
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        height: "100vh",
+        alignItems: "center",
+      }}
+      dangerouslySetInnerHTML={{ __html: embedCode }}
+    />
   );
 }
 
